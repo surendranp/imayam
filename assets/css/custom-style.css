@@ -16,7 +16,9 @@ body {
   box-shadow: 2px 2px 3px #484848;
   z-index: 100;
 }
-
+nav{
+  background: #000;
+}
 .my-float {
   margin-top: 16px;
   font-size: 30px;
