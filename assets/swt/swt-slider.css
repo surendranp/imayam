@@ -1,0 +1,138 @@
+/* */
+
+
+.swt-wrapper {
+	position: relative;
+	width: 500px;
+	height: 400px;
+	overflow: hidden;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	padding: 1rem;
+}
+
+.swt-input {
+	appearance: none;
+	z-index: 100;
+	margin-right: 1rem;
+	width: 1rem;
+	height: 1rem;
+	background: rgb(255, 255, 255);
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.swt-input:last-of-type {
+	margin: 0;
+}
+
+.swt-input:focus {
+	outline: none;
+}
+
+.swt-input:checked {
+	background: rgb(131, 131, 131);
+}
+
+.swt-input + * {
+	position: absolute;
+	display: block;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	transform: translateX(100%);
+	transition: transform ease-in-out 400ms;
+	border-radius: 5px;
+	overflow: hidden;
+	background: #ddd;
+}
+
+.swt-input + *[aria-label]:before {
+	content: attr(aria-label);
+	display: block;
+	position: absolute;
+	bottom: 3.5rem;
+	right: 1.5rem;
+	font-size: 1.5rem;
+	color: white;
+	z-index: 1;
+	padding: .5rem;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.swt-section {
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.swt-input:checked + * {
+	transform: translateX(0);
+	z-index: 1;
+}
+
+/* 
+	just to be safe we hide every element that comes after
+	each slide and that's not an .swt-input of type radio
+*/
+.swt-input + * + *:not(.swt-input[type=radio]) {
+	display: none;
+}
+
+/* ARROWS */
+
+.swt-input:before {
+	display: none !important;
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 1rem;
+	width: 2rem;
+	height: 2rem;
+	background: orange;
+	border-radius: 50%;
+}
+
+.swt-input:after {
+	display: none !important;
+	content: '';
+	position: absolute;
+	top: calc(50% + 1rem);
+	left: 2rem;
+	width: .5rem;
+	height: .5rem;
+	border-bottom: 1px solid #262626;
+	border-left: 1px solid #262626;
+	transform: translate(-25%, -50%) rotate(45deg);
+}
+
+.swt-input:checked:before, .swt-input:checked:after {
+	display: none;
+}
+
+.swt-input:checked + * + .swt-input:before {
+	left: calc(100% - 3rem);
+}
+
+.swt-input:checked + * + .swt-input:after {
+	left: calc(100% - 2rem);
+	transform: translate(-75%, -50%) rotate(-135deg);
+}
+
+/* .swt-input:checked + * + .swt-input + * ~ .swt-input:before,
+.swt-input:checked + * + .swt-input + * ~ .swt-input:after,
+{
+	display: none;
+} */
+
+.swt-input:last-of-type:before {
+	background: green;
+}
+
+
+
+

@@ -1,0 +1,53 @@
+/* whatsapp and call button float start */
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.float-icon {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 60px;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #484848;
+  z-index: 100;
+}
+
+.my-float {
+  margin-top: 16px;
+  font-size: 30px;
+}
+
+.float-icon:hover {
+  color: Orange;
+  font-size: 30px;
+}
+
+/* whatsapp and call button float end */
+
+
+/* footer  */
+footer{
+  background: #1d1d1d;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  }
+  
+  footer a{
+  text-decoration: none;
+  color: #fefefe;
+  font-size: 20px;
+  
+  }
+  .btn-box{
+  border-radius: 5em;
+  padding: 5px 2em;
+  }
+  
+  .content2 a:hover{
+  color: #ffb507;
+  }
